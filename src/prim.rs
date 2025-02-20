@@ -166,3 +166,8 @@ pub fn set_face_vertex_counts(prim: &mut Prim, counts: Vec<u32>) {
     prim.attributes
         .insert("faceVertexCounts".to_string(), Attribute::IntArray(counts));
 }
+
+pub fn set_normals(prim: &mut Prim, normals: Vec<[f32; 3]>) {
+    prim.attributes
+        .insert("normals".to_string(), Attribute::Float3Array(normals));
+}
